@@ -1,0 +1,842 @@
+
+*{
+    box-sizing:border-box;  
+    margin:0;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    padding:0px;
+  
+}
+
+  
+  
+  
+  
+.mobileNav{
+    display:none;
+}
+  
+  .open{
+    display:none;
+}
+  
+  @font-face {
+      font-family: 'CustomFont';
+      src: url('./path/to/custom-font.woff') format('woff');
+      /* Add additional src declarations for different font formats if needed */
+  }
+    
+  /* Apply custom font family to all text */
+  body {
+      font-family: 'CustomFont', sans-serif; /* Replace 'CustomFont' with your font family name */
+  }
+    
+  
+  .header{
+      display:flex;
+      justify-content:space-between;
+      padding-left:20px;
+      background:black;
+      padding-bottom:0px;
+      
+  }
+  
+  .left{
+      
+  }
+  
+  .right{
+      padding:10px;
+  }
+  
+  .logo{
+      width:55px;
+      border-radius:100%;
+      margin-top:18px;
+  }
+  
+  .span{
+      color:red;
+      position:absolute;
+      margin-top:30px;
+      margin-left:10px;
+      font-size:25px;
+      font-weight:bolder;
+  }
+  
+  ul{
+      display:flex;
+  }
+  li{
+      margin:30px;
+      color:white;
+      list-style:none;
+  }
+  
+  .icons{
+      margin-right:5px;
+  }
+  
+  a{
+      text-decoration:none;
+  }
+  .desktop{
+      padding-bottom:-20px;
+      margin-top:-5px;
+      
+  }
+  
+  .desktop:hover{
+      
+      outline:2px solid lightgray;
+      transition:0.3s ease-in-out;
+      
+      font-weight:bolder;
+  }
+  
+  .navIcons{
+      display:none;
+  }
+  
+  /********************BODY***************/
+  
+  
+  
+  
+  .first {
+      position: relative;
+      height:100vh;
+      font-family: 'Montserrat', sans-serif;
+      
+      
+      
+      padding-top:70px;
+  }
+    
+    .first::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.7; /* Adjust the opacity value for the overlay */
+      background-color: rgba(0, 0, 0, 0.5); 
+  }
+    
+  .div1 {
+      position: relative; /* Ensure the content appears above the background */
+      z-index: 1; /* Ensure the content appears above the background */
+      text-align:center;
+      font-family: 'Montserrat', sans-serif;
+  }
+    
+  /* Other styles for .div1 and its children */
+    
+  
+  
+  .subtext{
+      font-size:25px;
+      margin-top:40px;
+      margin-bottom:20px;
+      
+      font-family: "Roboto Mono", monospace;
+  
+  }
+  
+  .flavours{
+      font-size:40px;
+      margin-top:40px;
+      margin-bottom:30px;
+      font-family: "Roboto Mono", monospace;
+  
+  }
+  
+  
+  
+  
+  
+  
+  .firstbtn {
+      position: relative;
+      padding: 10px 20px; /* Adjust padding as needed */
+      border: 2px solid white; /* Set initial border */
+      background-color: transparent; /* Set background color */
+      color: #000; /* Set text color */
+      font-size: 16px; /* Adjust font size as needed */
+      cursor: pointer;
+      outline: none; /* Remove default focus outline */
+    }
+    
+    .firstbtn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 2px solid gold;
+      animation: border-animation 2s infinite linear;
+    }
+    
+    @keyframes border-animation {
+      0% {
+        clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+      }
+      25% {
+        clip-path: polygon(10% 10%, 100% 0%, 100% 100%, 0% 100%);
+      }
+      50% {
+        clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 10%);
+      }
+      75% {
+        clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 10%);
+      }
+      100% {
+        clip-path: polygon(10% 100%, 100% 100%, 100% 100%, 0% 100%);
+      }
+    }
+    
+  
+  
+  button{
+      width:50%;
+      padding:15px;
+      
+      border:none;
+      outline:2px solid black;
+      font-weight:bolder;
+      margin-top:30px;
+      cursor: pointer;
+      font-family: "Roboto Mono", monospace;
+  }
+  
+  button:hover{
+      background:#C8C8C8;
+      transition: transform 0.5s ease-in-out;
+      color:black;
+  }
+  
+  .navItems:hover{
+    color:rgba(213,211,49,0.79);
+    transition: transform 0.9s ease-in-out;
+    }
+  
+  
+  .options {
+      display:flex;
+      justify-content:space-evenly;
+      position: relative;
+    }
+    
+    .options::before,
+    .options::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 10px; /* Adjust border height as needed */
+      background-color: gold; /* Adjust border color as needed */
+      animation-duration: 4s; /* Adjust animation duration as needed */
+      animation-timing-function: ease-in-out; /* Adjust animation timing as needed */
+      animation-iteration-count: infinite;
+    }
+    
+    .options::before {
+      top: 0;
+      animation-name: border-animation-top;
+    }
+    
+    .options::after {
+      bottom: 0;
+      animation-name: border-animation-bottom;
+    }
+    
+    @keyframes border-animation-top {
+      0% {
+        width: 0;
+        opacity: 0;
+      }
+      50% {
+        width: 100%;
+        opacity: 1;
+      }
+      100% {
+        width: 0;
+        opacity: 0;
+      }
+    }
+    
+    @keyframes border-animation-bottom {
+      0% {
+        width: 0;
+        opacity: 0;
+      }
+      50% {
+        width: 100%;
+        opacity: 1;
+      }
+      100% {
+        width: 0;
+        opacity: 0;
+      }
+    }
+    
+  
+  
+  /****SLIDE UP ANIMATION*******/
+  
+  .slide-up {
+      transition: transform 0.5s ease-in-out;
+      transform: translateX(0);
+  }
+  
+  .ribbon.slide-up,
+  .foodname.slide-up,
+  .foodtext.slide-up,
+  .view.slide-up {
+      transform: translateY(100%);
+  }
+  /****SLIDE UP ANIMATION******/
+  
+  
+  
+  
+  
+  
+  
+  .breakfast {
+      text-align: center;
+    }
+    
+    .slider {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .slides-container {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    
+    .slide {
+      flex: 0 0 100%;
+    }
+    
+    img {
+      width: 100%;
+      height: auto;
+  }
+  .second-body{
+      text-align:center;
+      
+      
+      
+  
+      
+  }
+  
+  
+  .breakfast{
+      padding:20px;
+      background:black;
+  }
+  
+  .breakfastImg{
+      max-width:600px;
+      height:300px;
+      border-radius:5px;
+  }
+    
+  .ribbon{
+      width:100px;
+  
+  }
+  
+  .foodname{
+      color:white;
+      margin-bottom:10px;
+      font-weight:bolder;
+      font-size:35px;
+      font-family: "Roboto Mono", monospace;
+  }
+  
+  
+  
+  .foodtext{
+      color:gold;
+      margin-top:15px;
+  }
+  
+  .view{
+      background:gold;
+      font-weight:bold;
+      margin-bottom:20px;
+  }
+  
+  .break{
+      padding-top:;
+  }
+  
+  
+  
+  .wave-container {
+      position: relative;
+      width: 100%;
+      height: 200px; /* Adjust height as needed */
+      overflow: hidden;
+  }
+  
+  .wave {
+      position: absolute;
+      width: 100%;
+      height: 100px; /* Adjust height as needed */
+      background-image: url('data:image/svg+xml;utf8,<svg id="wave" viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg"><path fill="rgba(246, 213, 181, 0.8)" d="M0,96L120,85.3C240,75,480,53,720,64C960,75,1200,117,1320,138.7L1440,160L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>');
+      background-size: cover;
+      animation: wave-animation 2s infinite linear;
+  }
+  
+  @keyframes wave-animation {
+      0% {
+          background-position-x: 0;
+      }
+      100% {
+          background-position-x: 100%;
+      }
+  }
+  
+  /***************************SPECIAL SECTION***/
+  
+  .special-meals{
+      background:black;
+  }
+  
+  .special-meal-details{
+      text-align:center;
+      padding-top:80px;
+      padding-bottom:80px;
+  }
+  
+  
+  .cutleryIcon{
+      color:yellow;
+  }
+  
+  .specialImg{
+      max-width:100%;
+      max-height:600px;;
+      margin:auto;
+  }
+  
+  .special{
+      color:white;
+      margin-top:20px;
+  }
+  
+  .price-flex{
+      display:flex;
+      color:yellow;
+      justify-content:center;
+      font-size:25px;
+  }
+  
+  .strike{
+      margin-right:40px;
+      opacity:15%;
+      text-decoration:line-through;
+  }
+  
+  .specialbtn{
+      color:yellow;
+      border: 0.1px solid yellow ;
+  }
+  
+  .specialbtn:hover{
+      
+  }
+  
+  /**********DRINKS SECTION****************/
+  /*
+  .drinksDiv{    
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://img.pikbest.com/origin/09/31/41/00HpIkbEsTNsk.png!w700wp');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.7; /* Adjust the opacity value for the overlay /
+      background-color: rgba(0, 0, 0, 0.5); 
+  }
+  
+  */
+  
+  
+  .drinksDiv{
+      text-align:center;
+  }
+  
+  .drinksHead{
+      text-shadow: 3px 3px 14px rgba(0,0,0,0.6);
+      margin-bottom:50px;
+  }
+  
+  
+  .drinksBody{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10;
+      justify-content:space-evenly;
+  
+  
+  
+  }
+  
+  .drinks{
+      text-align:center;
+      cursor: pointer;
+  }
+  .drinksImg{
+      width:250px;
+      border-radius:90%;
+      height:250px;
+      transition: 0.5s ease-in-out;
+  }
+  .drinksImg:hover{
+      transform:scale(1.1);
+      
+  
+  }
+  
+  .drinksText{
+      width:300px;
+      padding-top:20px;
+      
+      margin:auto;
+  }
+  
+  .drinks{
+      margin-bottom:60px;
+  }
+  
+  .drinks>a{
+      color:red;
+      font-size:19px;
+      margin-bottom:45px;
+      
+  }
+  
+  .move{
+      margin-top:10px;
+      transition: 0.3s ease-in-out;
+  }
+  .drinks>a:hover .move{
+      margin-left:10px;
+      transform: translateX(20px);
+  }
+  
+  
+  /***FOOTER******/
+  
+  
+  .footer{
+      text-align:center;
+      background:#2A2A2A;
+      padding:30px;
+  }
+  .footer>h4{
+      font-size:25px;
+      color:white;
+      margin-bottom:20px;
+  }
+  
+  .footerDetails{
+      text-align:center;
+  }
+  
+  .footerDetails>a{
+      margin-left:20px;
+  
+  }
+  
+  .socialIcon:hover{
+      
+      color:rgba(213,211,49,0.79);
+      transition: transform 0.9s ease-in-out;
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  @media screen and (max-width: 970px) {
+      
+          ul{
+              display:none;
+          }
+  
+      .logo{
+          padding-top:10px;
+          margin-bottom:12px;
+          width:50px;
+          
+      }
+  
+      .mobileNav{
+          display:block;
+          padding:10px;
+          background:lightblue;
+          height:100vh;
+          text-align:center;
+          z-index: 2;
+  
+      }
+  
+  
+  
+  
+  
+  
+      .navIcons{
+          display:block;
+      }
+  
+      .navitems{
+          margin-bottom:30px;
+          margin-top:10px;
+          color:black;
+          text-decoration:none;
+          font-size:15px;
+          font-weight:bolder;
+      }
+  
+      .navItems:hover{
+          color:rgba(213,211,49,0.79);
+          transition: transform 0.9s ease-in-out;
+      }
+  
+  
+      .navBtn{
+          padding:20px;
+          width:100%;
+          background:blue;
+          font-size:20px;
+      }
+  
+      .navIcons{
+         
+      }
+  
+      .navIcons:active{
+          transform:scale(0.89);
+      }
+  
+        .open {
+            display:block;            
+            color:white;
+            cursor: pointer;
+            margin-top:15.5px;
+            margin-right:10px;
+          
+        }
+        .open:active{
+            transform:scale(0.8);
+        }
+
+        
+
+      .close {
+          position:absolute;
+          top: 5%;
+          cursor: pointer;
+          right:9%;
+          color:red;
+          
+      }
+  
+      /* Navbar.css */
+  
+      .mobileNav {
+          position: fixed;
+          top: 0%;
+          left: -100%; /* Initially hidden off to the left */
+          width: 100%;
+          height: 100%;
+          background: #333;
+          transition: left 0.5s; /* Apply transition for smooth animation */
+      }
+  
+      .mobileNav.show {
+          left: 0; /* Slide in from left to right when show class is added */
+      }
+  
+      .navContainer {
+          
+          padding:10px;
+          height: 100%;
+          margin-top:-55px;
+          
+      }
+  
+      .navitems {
+          color: #fff;
+          text-decoration: none;
+          margin-top:-5px;
+          text-align:left;
+          
+          padding-top:25px;
+          
+      }
+      
+  
+      .navdetail1{
+          color:white;
+          font-size:29px;
+          margin-top:20px;
+          margin-bottom:20px;
+      }
+  
+      .navdetail2{
+          font-size:16px;
+          color:white;
+          opacity:55%;
+          margin-bottom:0.5em;
+          
+      }
+      .call{
+          color:yellow;
+          font-weight:bolder;
+          margin-top:5px;
+      }
+      .navLogo{
+          
+          
+          margin-bottom:100px;
+      }
+      .logo{
+          margin-top:10px;
+          padding-bottom:10px;
+          width:40px;
+      }
+  
+      .span{
+          color:red;
+          position:absolute;
+          margin-top:29px;
+          margin-left:10px;
+          font-size:20px;
+          font-weight:bolder;
+      }
+      /********************BODY***************/
+  
+      .options{
+          display:block;
+      }
+  
+      .subtext{
+          font-size:20px;
+          margin-bottom:20px;
+          font-family: "Teko", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: <weight>;
+          font-style: normal;
+      }
+  
+      .flavours{
+          font-size:23px;
+      }
+      button{
+          max-width:100%;
+          padding:15px;
+          
+          background:none;
+          border:none;
+          outline:1px solid black;
+          font-weight:bolder;
+          margin-top:30px;
+      }
+  
+      .foodname{
+          font-size:23px;
+          margin-top:10px;
+      }
+  
+      .view{
+          background:gold;
+          font-weight:bold;
+          font-size:12px;
+      }
+  
+  
+      /**DRINKS SECTION**/
+  
+      .drinksImg{
+          width:150px;
+          border-radius:90%;
+          height:150px;
+      }
+  
+      /***FOOTER***/
+  
+      .footer>h4{
+          font-size:15px;
+          
+      }
+  
+  
+  
+  
+      .socialIcon{
+          width:18px;
+      }
+  
+  
+      
+  
+  
+  
+  
+  
+      
+  
+  
+  
+  
+  
+  
+  
+  
+}
+  
+  
+  
+  
+  
+  
